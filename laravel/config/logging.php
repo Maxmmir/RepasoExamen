@@ -52,10 +52,20 @@ return [
 
     'channels' => [
         'stack' => [
-            'driver' => 'stack',
-            'channels' => ['single'],
-            'ignore_exceptions' => false,
+
+            'stack' => [
+                'driver' => 'stack',
+                'channels' => ['file', 'errorlog'],
+                'ignore_exceptions' => false,
+            ]
+            
+            // 'driver' => 'stack',
+            // 'channels' => ['single'],
+            // 'ignore_exceptions' => false,
+
         ],
+
+
 
         'single' => [
             'driver' => 'single',
